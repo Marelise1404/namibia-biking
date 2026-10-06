@@ -8,6 +8,17 @@
 
 <style>
 
+:root {
+    --charcoal: #202326;
+    --dark: #121416;
+    --steel: #343a3f;
+    --sand: #c6a16b;
+    --copper: #b96832;
+    --blue: #526d7a;
+    --cream: #e8e3d8;
+    --muted: #a9aaa7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,8 +31,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0b;
-    color: #ffffff;
+    background: var(--dark);
+    color: var(--cream);
     line-height: 1.6;
 }
 
@@ -30,7 +41,6 @@ body {
 nav {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000;
 
@@ -40,18 +50,18 @@ nav {
 
     padding: 18px 6%;
 
-    background: rgba(5,5,5,0.92);
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+    background: rgba(18,20,22,0.94);
+    border-bottom: 1px solid rgba(198,161,107,0.3);
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .logo span {
-    color: #d71920;
+    color: var(--sand);
 }
 
 .nav-links {
@@ -60,16 +70,15 @@ nav {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: var(--cream);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
-    letter-spacing: 1px;
-    transition: 0.3s;
+    letter-spacing: 1.5px;
 }
 
 .nav-links a:hover {
-    color: #d71920;
+    color: var(--sand);
 }
 
 /* ================= HERO ================= */
@@ -85,9 +94,9 @@ nav {
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,0.88) 0%,
-            rgba(0,0,0,0.60) 45%,
-            rgba(0,0,0,0.30) 100%
+            rgba(10,12,14,0.94) 0%,
+            rgba(20,23,25,0.68) 48%,
+            rgba(20,23,25,0.30) 100%
         ),
         url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=2200&q=90");
 
@@ -100,37 +109,39 @@ nav {
 }
 
 .eyebrow {
-    color: #d71920;
-    font-size: 15px;
+    color: var(--sand);
+    font-size: 14px;
     font-weight: bold;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .hero h1 {
-    font-size: clamp(55px, 9vw, 115px);
-    line-height: 0.88;
+    font-size: clamp(55px, 9vw, 120px);
+    line-height: 0.85;
     text-transform: uppercase;
+    letter-spacing: -4px;
     font-weight: 900;
-    letter-spacing: -3px;
 }
 
 .hero h1 span {
-    color: #d71920;
+    color: var(--sand);
 }
 
 .hero-tagline {
     margin-top: 30px;
-    font-size: clamp(20px, 3vw, 30px);
+
+    font-size: clamp(18px, 3vw, 28px);
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .hero-description {
     max-width: 700px;
     margin-top: 18px;
-    color: #d0d0d0;
+
+    color: #d0d0cc;
     font-size: 18px;
 }
 
@@ -140,103 +151,156 @@ nav {
 
 .button {
     display: inline-block;
-    padding: 14px 27px;
+
+    padding: 14px 28px;
     margin-right: 10px;
     margin-bottom: 10px;
 
-    background: #d71920;
-    color: #ffffff;
+    background: var(--copper);
+    color: white;
 
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
 
-    border-radius: 3px;
-    transition: 0.3s;
+    border-radius: 2px;
 }
 
 .button:hover {
-    transform: translateY(-3px);
+    background: var(--sand);
+    color: var(--dark);
 }
 
 .button-outline {
     background: transparent;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--sand);
+    color: var(--cream);
 }
 
-/* ================= SECTION ================= */
+/* ================= ROAD STRIPE ================= */
+
+.road-stripe {
+    height: 7px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue) 0%,
+            var(--blue) 30%,
+            var(--sand) 30%,
+            var(--sand) 70%,
+            var(--copper) 70%,
+            var(--copper) 100%
+        );
+}
+
+/* ================= SECTIONS ================= */
 
 section {
     padding: 90px 8%;
 }
 
 .section-label {
-    color: #d71920;
+    color: var(--copper);
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 8px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
 }
 
 .section-title {
-    font-size: clamp(35px, 5vw, 55px);
+    font-size: clamp(35px, 5vw, 58px);
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
 .section-title span {
-    color: #d71920;
+    color: var(--sand);
 }
 
 .section-intro {
     max-width: 800px;
-    color: #aaa;
+    color: var(--muted);
     font-size: 17px;
     margin-bottom: 45px;
 }
 
-/* ================= INTRO ================= */
+/* ================= ABOUT ================= */
 
-.intro {
-    background: #151515;
+.about {
+    background: var(--charcoal);
 }
 
-.intro-grid {
+.about-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
     align-items: center;
 }
 
-.intro-text p {
-    color: #bdbdbd;
+.about-text p {
+    color: var(--muted);
     margin-bottom: 18px;
 }
 
-.namibia-box {
-    padding: 40px;
+.motto-box {
+    padding: 45px;
+
+    background: var(--steel);
+
+    border-left: 5px solid var(--sand);
+
+    position: relative;
+}
+
+.motto-box h3 {
+    font-size: 34px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.motto-box p {
+    color: var(--cream);
+}
+
+/* ================= MOTORCYCLE FEATURE ================= */
+
+.motorcycle-feature {
+    min-height: 500px;
+
+    display: flex;
+    align-items: flex-end;
 
     background:
         linear-gradient(
-            135deg,
-            rgba(215,25,32,0.9),
-            rgba(60,20,20,0.9)
-        );
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.85)
+        ),
+        url("https://images.unsplash.com/photo-1558981285-6f0c94958bb6?auto=format&fit=crop&w=2000&q=90");
 
-    border-left: 5px solid #ffffff;
+    background-size: cover;
+    background-position: center;
+
+    padding: 45px;
 }
 
-.namibia-box h3 {
-    font-size: 30px;
+.motorcycle-feature-content {
+    max-width: 650px;
+}
+
+.motorcycle-feature h2 {
+    font-size: clamp(38px, 6vw, 70px);
     text-transform: uppercase;
-    margin-bottom: 12px;
+    line-height: 0.95;
 }
 
-.namibia-box p {
-    color: #eeeeee;
+.motorcycle-feature p {
+    margin-top: 15px;
+    color: #ddd;
 }
 
 /* ================= CARDS ================= */
@@ -248,20 +312,22 @@ section {
 }
 
 .card {
-    background: #171717;
-    border: 1px solid #292929;
+    background: var(--charcoal);
+
+    border: 1px solid #3a3e41;
+
     padding: 32px;
 
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    border-color: #d71920;
+    transform: translateY(-5px);
+    border-color: var(--sand);
 }
 
 .card-icon {
-    font-size: 38px;
+    font-size: 35px;
     margin-bottom: 15px;
 }
 
@@ -271,83 +337,106 @@ section {
 }
 
 .card p {
-    color: #999;
+    color: var(--muted);
 }
 
-/* ================= CLUBS ================= */
+/* ================= CLUB DIRECTORY ================= */
 
 .clubs {
-    background: #101010;
+    background: #17191b;
 }
 
-.club-placeholder {
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.35),
-            rgba(0,0,0,0.8)
-        ),
-        url("https://images.unsplash.com/photo-1558981285-6f0c94958bb6?auto=format&fit=crop&w=1800&q=85");
+.search-box {
+    width: 100%;
+    max-width: 600px;
 
-    background-size: cover;
-    background-position: center;
+    padding: 16px 20px;
 
-    min-height: 330px;
+    background: var(--charcoal);
 
-    display: flex;
-    align-items: flex-end;
+    border: 1px solid #4a4e51;
 
-    padding: 35px;
+    color: white;
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
 }
 
-.club-placeholder h3 {
-    font-size: 34px;
+.club-card {
+    background: var(--charcoal);
+    border: 1px solid #3a3e41;
+    padding: 30px;
+}
+
+.club-card h3 {
+    font-size: 25px;
     text-transform: uppercase;
 }
 
-.club-placeholder p {
-    color: #ddd;
+.club-location {
+    color: var(--sand);
+    font-weight: bold;
+    margin: 8px 0 15px;
 }
 
-/* ================= COMMUNITY STRIP ================= */
+.coming-soon {
+    display: inline-block;
 
-.community-strip {
-    padding: 70px 8%;
-    text-align: center;
+    padding: 6px 10px;
 
+    background: var(--blue);
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ================= COMMUNITY ================= */
+
+.community {
     background:
         linear-gradient(
-            rgba(215,25,32,0.92),
-            rgba(140,10,15,0.92)
+            135deg,
+            #283238,
+            #171a1d
         );
+
+    text-align: center;
 }
 
-.community-strip h2 {
-    font-size: clamp(35px, 6vw, 65px);
-    line-height: 1;
+.community h2 {
+    font-size: clamp(38px, 6vw, 70px);
     text-transform: uppercase;
+    line-height: 0.95;
 }
 
-.community-strip p {
-    margin-top: 15px;
-    font-size: 20px;
+.community p {
+    max-width: 700px;
+    margin: 20px auto;
+    color: #c4c6c4;
+    font-size: 18px;
 }
 
 /* ================= HISTORY ================= */
 
 .history {
-    background: #151515;
+    background: var(--charcoal);
 }
 
 /* ================= EVENTS ================= */
 
 .events {
-    background: #0b0b0b;
+    background: var(--dark);
 }
 
 .event-box {
-    border-left: 4px solid #d71920;
+    background: var(--charcoal);
+
+    border-left: 4px solid var(--copper);
+
     padding: 25px 30px;
-    background: #171717;
+
     margin-bottom: 15px;
 }
 
@@ -356,16 +445,33 @@ section {
 }
 
 .event-box p {
-    color: #999;
+    color: var(--muted);
+}
+
+/* ================= ROUTES ================= */
+
+.routes {
+    background:
+        linear-gradient(
+            rgba(20,22,24,0.88),
+            rgba(20,22,24,0.95)
+        ),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
 }
 
 /* ================= FOOTER ================= */
 
 footer {
-    background: #050505;
+    background: #0c0e10;
+
     padding: 50px 8%;
+
     text-align: center;
-    border-top: 1px solid #222;
+
+    border-top: 1px solid #34383b;
 }
 
 footer .logo {
@@ -378,7 +484,7 @@ footer p {
 }
 
 .footer-motto {
-    color: #d71920;
+    color: var(--sand);
     margin-top: 10px;
     font-weight: bold;
 }
@@ -403,7 +509,7 @@ footer p {
         font-size: 65px;
     }
 
-    .intro-grid {
+    .about-grid {
         grid-template-columns: 1fr;
     }
 
@@ -413,6 +519,10 @@ footer p {
 
     section {
         padding: 65px 7%;
+    }
+
+    .motorcycle-feature {
+        min-height: 400px;
     }
 }
 
@@ -430,11 +540,19 @@ footer p {
     </div>
 
     <div class="nav-links">
+
         <a href="#about">ABOUT</a>
+
         <a href="#clubs">CLUBS</a>
+
         <a href="#history">HISTORY</a>
+
         <a href="#events">EVENTS</a>
+
+        <a href="#routes">ROUTES</a>
+
         <a href="#community">COMMUNITY</a>
+
     </div>
 
 </nav>
@@ -456,22 +574,22 @@ footer p {
         </h1>
 
         <div class="hero-tagline">
-            ONE COUNTRY. ONE ROAD. ONE BIKING COMMUNITY.
+            ONE COUNTRY. ONE ROAD. ONE COMMUNITY.
         </div>
 
         <p class="hero-description">
-            Discover the people, clubs, roads, events and stories
-            that make Namibia's motorcycle community unique.
+            The people, clubs, roads, events and stories
+            behind Namibia's motorcycle community.
         </p>
 
         <div class="buttons">
 
             <a href="#clubs" class="button">
-                Explore The Clubs
+                Explore Clubs
             </a>
 
-            <a href="#history" class="button button-outline">
-                Discover Our History
+            <a href="#routes" class="button button-outline">
+                Ride Namibia
             </a>
 
         </div>
@@ -480,57 +598,88 @@ footer p {
 
 </section>
 
+<div class="road-stripe"></div>
+
 
 <!-- ================= ABOUT ================= -->
 
-<section id="about" class="intro">
+<section id="about" class="about">
 
-    <div class="intro-grid">
+    <div class="about-grid">
 
-        <div class="intro-text">
+        <div class="about-text">
 
             <div class="section-label">
-                Welcome
+                About Namibia Biking
             </div>
 
             <h2 class="section-title">
-                More Than<br>
-                <span>Just A Ride</span>
+                Built For<br>
+                <span>The Open Road</span>
             </h2>
 
             <p>
-                Namibia Biking is a national platform created to
-                introduce, connect and celebrate Namibia's motorcycle
+                Namibia Biking is an independent platform created
+                to introduce and connect Namibia's motorcycle
                 community.
             </p>
 
             <p>
-                From established motorcycle clubs and independent
-                riders to charity organisations, businesses and
-                event organisers — this is a place where the Namibian
-                biking community can be discovered.
+                Our goal is to document the history of motorcycle
+                clubs, celebrate riders and their stories, share
+                events and highlight the roads that make Namibia
+                such a unique place to ride.
             </p>
 
             <p>
-                Our aim is to preserve our history, celebrate our
-                present and create a record for future generations
-                of Namibian bikers.
+                This platform belongs to the wider biking
+                community — not to one individual motorcycle club.
             </p>
 
         </div>
 
-        <div class="namibia-box">
+        <div class="motto-box">
 
             <h3>
-                One Community
+                One Road.<br>
+                Many Stories.
             </h3>
 
             <p>
                 Different motorcycles.<br>
                 Different clubs.<br>
-                Different roads.<br><br>
+                Different journeys.<br><br>
 
-                But one country — and one passion for the road.
+                One Namibia.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MOTORCYCLE FEATURE ================= -->
+
+<section>
+
+    <div class="motorcycle-feature">
+
+        <div class="motorcycle-feature-content">
+
+            <div class="section-label">
+                The Ride
+            </div>
+
+            <h2>
+                Feel The<br>
+                Road.
+            </h2>
+
+            <p>
+                From coastal roads to desert tracks and long
+                open highways — Namibia was made for motorcycles.
             </p>
 
         </div>
@@ -553,24 +702,38 @@ footer p {
     </h2>
 
     <p class="section-intro">
-        Get to know motorcycle clubs across Namibia — their history,
-        members, achievements, events and contribution to the
-        community.
+        Motorcycle clubs from across Namibia will be featured
+        here. Club information will be added as it is verified.
     </p>
+
+    <input
+        class="search-box"
+        type="text"
+        placeholder="Search motorcycle clubs..."
+    >
 
     <div class="cards">
 
-        <div class="club-placeholder">
+        <div class="club-card">
 
-            <div>
-                <h3>
-                    Club Directory
-                </h3>
+            <h3>
+                Namibia Motorcycle Clubs
+            </h3>
 
-                <p>
-                    Find motorcycle clubs across Namibia.
-                </p>
+            <div class="club-location">
+                🇳🇦 Across Namibia
             </div>
+
+            <p>
+                The club directory is currently being developed.
+                Verified club profiles will be added soon.
+            </p>
+
+            <br>
+
+            <span class="coming-soon">
+                Information Coming Soon
+            </span>
 
         </div>
 
@@ -585,8 +748,9 @@ footer p {
             </h3>
 
             <p>
-                Every club can have its own profile with its story,
-                history, milestones, events and official links.
+                Each club will have its own profile containing
+                its history, story, events, community work and
+                official links.
             </p>
 
         </div>
@@ -602,8 +766,8 @@ footer p {
             </h3>
 
             <p>
-                Clubs will be able to submit their information
-                and become part of the Namibia Biking directory.
+                Motorcycle clubs will eventually be able to
+                submit their information for inclusion.
             </p>
 
         </div>
@@ -613,20 +777,25 @@ footer p {
 </section>
 
 
-<!-- ================= COMMUNITY MESSAGE ================= -->
+<!-- ================= COMMUNITY ================= -->
 
-<div id="community" class="community-strip">
+<section id="community" class="community">
+
+    <div class="section-label">
+        Our Community
+    </div>
 
     <h2>
-        DIFFERENT CLUBS.<br>
+        DIFFERENT RIDES.<br>
         ONE COMMUNITY.
     </h2>
 
     <p>
-        Supporting the people who keep Namibia's biking spirit alive.
+        Namibia's motorcycle community is built by people —
+        riders, clubs, families, businesses and supporters.
     </p>
 
-</div>
+</section>
 
 
 <!-- ================= HISTORY ================= -->
@@ -634,7 +803,7 @@ footer p {
 <section id="history" class="history">
 
     <div class="section-label">
-        Our Story
+        Preserving The Past
     </div>
 
     <h2 class="section-title">
@@ -642,8 +811,9 @@ footer p {
     </h2>
 
     <p class="section-intro">
-        We want to preserve the stories of the people and clubs
-        who helped build Namibia's motorcycle community.
+        The history section will preserve the stories,
+        photographs, clubs, people and milestones that shaped
+        motorcycling in Namibia.
     </p>
 
     <div class="cards">
@@ -655,11 +825,11 @@ footer p {
             </div>
 
             <h3>
-                The Early Years
+                Early Years
             </h3>
 
             <p>
-                Discover the beginnings of organised motorcycling
+                The beginnings of organised motorcycling
                 in Namibia.
             </p>
 
@@ -676,8 +846,8 @@ footer p {
             </h3>
 
             <p>
-                Record the clubs, events and milestones that shaped
-                the biking community.
+                Important clubs, events and moments in
+                Namibia's biking history.
             </p>
 
         </div>
@@ -685,16 +855,16 @@ footer p {
         <div class="card">
 
             <div class="card-icon">
-                🧭
+                📸
             </div>
 
             <h3>
-                Stories From The Road
+                Memories
             </h3>
 
             <p>
-                Personal stories, memories and experiences from
-                Namibian bikers.
+                Photographs and stories from generations
+                of Namibian bikers.
             </p>
 
         </div>
@@ -717,8 +887,8 @@ footer p {
     </h2>
 
     <p class="section-intro">
-        A central place for rallies, runs, charity rides,
-        club events and motorcycle gatherings around Namibia.
+        Rallies, runs, charity rides, club events and
+        motorcycle gatherings from across Namibia.
     </p>
 
     <div class="event-box">
@@ -728,8 +898,7 @@ footer p {
         </h3>
 
         <p>
-            National motorcycle events and club activities will
-            appear here.
+            Event listings will be added soon.
         </p>
 
     </div>
@@ -737,12 +906,12 @@ footer p {
     <div class="event-box">
 
         <h3>
-            ❤️ Charity & Community Rides
+            ❤️ Charity & Community
         </h3>
 
         <p>
-            Highlighting the many ways Namibian bikers support
-            their communities.
+            Community rides and charity events will be
+            featured here.
         </p>
 
     </div>
@@ -754,7 +923,8 @@ footer p {
         </h3>
 
         <p>
-            Discover rides and rallies happening across Namibia.
+            Motorcycle rallies and organised rides across
+            Namibia will be listed here.
         </p>
 
     </div>
@@ -762,21 +932,22 @@ footer p {
 </section>
 
 
-<!-- ================= FUTURE FEATURES ================= -->
+<!-- ================= ROUTES ================= -->
 
-<section>
+<section id="routes" class="routes">
 
     <div class="section-label">
-        Coming Together
+        Ride Namibia
     </div>
 
     <h2 class="section-title">
-        Ride. <span>Connect.</span> Explore.
+        Roads Worth <span>Riding</span>
     </h2>
 
     <p class="section-intro">
-        Namibia Biking will continue to grow into a national
-        resource for riders and the wider biking community.
+        Namibia is home to incredible motorcycle routes,
+        landscapes and destinations. This section will grow
+        into a guide for riders exploring the country.
     </p>
 
     <div class="cards">
@@ -788,15 +959,73 @@ footer p {
             </div>
 
             <h3>
-                Ride Namibia
+                Routes
             </h3>
 
             <p>
-                Discover scenic routes, destinations and roads
-                worth riding.
+                Discover interesting motorcycle routes
+                around Namibia.
             </p>
 
         </div>
+
+        <div class="card">
+
+            <div class="card-icon">
+                🏜️
+            </div>
+
+            <h3>
+                Destinations
+            </h3>
+
+            <p>
+                Places worth putting on your motorcycle
+                adventure list.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">
+                🧭
+            </div>
+
+            <h3>
+                Rider Information
+            </h3>
+
+            <p>
+                Useful information for bikers travelling
+                across Namibia.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FUTURE ================= -->
+
+<section>
+
+    <div class="section-label">
+        The Bigger Picture
+    </div>
+
+    <h2 class="section-title">
+        More Than <span>Motorcycles</span>
+    </h2>
+
+    <p class="section-intro">
+        Namibia Biking will grow into a place where the wider
+        motorcycle community can connect.
+    </p>
+
+    <div class="cards">
 
         <div class="card">
 
@@ -809,8 +1038,8 @@ footer p {
             </h3>
 
             <p>
-                Share photographs, stories and memories from
-                Namibia's motorcycle community.
+                Stories, photographs and people from
+                Namibia's biking community.
             </p>
 
         </div>
@@ -826,8 +1055,25 @@ footer p {
             </h3>
 
             <p>
-                Showcase the people and organisations making
-                a difference through biking.
+                Highlighting the good work done by
+                Namibian bikers.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">
+                🔧
+            </div>
+
+            <h3>
+                Biker Directory
+            </h3>
+
+            <p>
+                A future directory for motorcycle-related
+                businesses, workshops and services.
             </p>
 
         </div>
@@ -846,11 +1092,12 @@ footer p {
     </div>
 
     <p>
-        A platform celebrating Namibia's motorcycle community.
+        An independent platform celebrating Namibia's
+        motorcycle community.
     </p>
 
     <p class="footer-motto">
-        ONE COUNTRY. ONE ROAD. ONE BIKING COMMUNITY.
+        ONE COUNTRY. ONE ROAD. ONE COMMUNITY.
     </p>
 
     <br>
