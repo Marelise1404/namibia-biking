@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Namibia Biking | One Country. One Road. One Biking Community.</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: #fff;
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(10,10,10,0.92);
+    border-bottom: 1px solid #444;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #d71920;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d71920;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 8% 80px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.78)),
+    url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 90px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #d71920;
+}
+
+.hero p {
+    font-size: 22px;
+    max-width: 700px;
+    color: #ddd;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+    background: #d71920;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    margin-right: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.button.dark {
+    background: transparent;
+    border: 1px solid white;
+}
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: #d71920;
+}
+
+.section-intro {
+    color: #bbb;
+    max-width: 750px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 30px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #d71920;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #aaa;
+}
+
+.about {
+    background: #181818;
+}
+
+.highlight {
+    background: #d71920;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.highlight h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 20px;
+}
+
+footer {
+    background: #080808;
+    padding: 40px 8%;
+    text-align: center;
+    color: #777;
+}
+
+@media(max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .hero {
+        padding-top: 170px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">NAMIBIA <span>BIKING</span></div>
+
+    <div>
+        <a href="#about">ABOUT</a>
+        <a href="#clubs">CLUBS</a>
+        <a href="#history">HISTORY</a>
+        <a href="#events">EVENTS</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Namibia<br>
+            <span>Biking</span>
+        </h1>
+
+        <p>
+            One Country. One Road. One Biking Community.
+        </p>
+
+        <p>
+            Discover Namibia's motorcycle community,
+            the clubs, the people, the history and the roads
+            that bring us together.
+        </p>
+
+        <a class="button" href="#clubs">Meet The Clubs</a>
+        <a class="button dark" href="#history">Our History</a>
+
+    </div>
+
+</section>
+
+<section id="about" class="about">
+
+    <h2 class="section-title">
+        About <span>Namibia Biking</span>
+    </h2>
+
+    <p class="section-intro">
+        Namibia Biking is a platform created to connect and introduce
+        Namibia's motorcycle community. Our goal is to document our
+        history, showcase motorcycle clubs and celebrate the people
+        who make Namibia's biking community what it is.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🏍️ Our Clubs</h3>
+            <p>
+                Discover motorcycle clubs from across Namibia,
+                their stories, traditions and members.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🇳🇦 Our History</h3>
+            <p>
+                Explore the history of motorcycling in Namibia
+                and the clubs that helped build our community.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🛣️ Our Roads</h3>
+            <p>
+                Discover the incredible roads, routes and
+                destinations that Namibia has to offer.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>❤️ Our Community</h3>
+            <p>
+                Highlighting charity rides, community projects
+                and bikers making a difference.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="clubs">
+
+    <h2 class="section-title">
+        Meet The <span>Clubs</span>
+    </h2>
+
+    <p class="section-intro">
+        Namibia has a diverse and growing motorcycle community.
+        This section will become the home of Namibia's motorcycle clubs.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Club Directory</h3>
+            <p>
+                Browse motorcycle clubs by town, region and
+                type of club.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Club Profiles</h3>
+            <p>
+                Learn about each club's history, members,
+                achievements and community work.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Submit Your Club</h3>
+            <p>
+                Motorcycle clubs will be able to submit their
+                information and official links.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="highlight">
+
+    <h2>ONE COUNTRY. ONE ROAD.</h2>
+
+    <p>
+        Different clubs. Different bikes. One community.
+    </p>
+
+</div>
+
+<section id="history">
+
+    <h2 class="section-title">
+        Namibia's <span>Biking History</span>
+    </h2>
+
+    <p class="section-intro">
+        A growing archive documenting the people, clubs,
+        events and milestones that shaped motorcycling in Namibia.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Early Years</h3>
+            <p>
+                The beginnings of organised motorcycling
+                in Namibia.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Clubs & Communities</h3>
+            <p>
+                How motorcycle clubs grew and connected
+                riders across the country.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Milestones</h3>
+            <p>
+                Important events and moments in Namibia's
+                biking history.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="events" class="about">
+
+    <h2 class="section-title">
+        Biking <span>Events</span>
+    </h2>
+
+    <p class="section-intro">
+        A central place for motorcycle events, rallies,
+        charity rides, club runs and community activities.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Upcoming Events</h3>
+            <p>
+                Find upcoming motorcycle events around Namibia.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Rallies & Runs</h3>
+            <p>
+                Discover rides and rallies happening across
+                the country.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Charity Events</h3>
+            <p>
+                Support the causes and community projects
+                organised by Namibian bikers.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="section-title">
+        Join The <span>Community</span>
+    </h2>
+
+    <p class="section-intro">
+        Are you a motorcycle club, organiser, business or biker
+        who would like to be part of Namibia Biking?
+    </p>
+
+    <a class="button" href="mailto:info@namibiabiking.com">
+        Contact Us
+    </a>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Namibia Biking
+    </p>
+
+    <p>
+        One Country. One Road. One Biking Community.
+    </p>
+
+</footer>
+
+</body>
+</html>
